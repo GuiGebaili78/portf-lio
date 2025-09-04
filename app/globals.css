@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cores principais do projeto */
+:root {
+  --primary-dark: #213555;
+  --primary-medium: #3E5879;
+  --primary-darker: #0c1b31;
+  --accent-orange: #e48038;
+  --light-cream: #F5EFE7;
+  --whatsapp-green: #25D366;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 50%, var(--primary-darker) 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-orange), var(--light-cream));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Classes de utilidade para cores */
+.bg-primary-dark { background-color: var(--primary-dark); }
+.bg-primary-medium { background-color: var(--primary-medium); }
+.bg-primary-darker { background-color: var(--primary-darker); }
+.bg-accent-orange { background-color: var(--accent-orange); }
+.bg-light-cream { background-color: var(--light-cream); }
+.bg-whatsapp { background-color: var(--whatsapp-green); }
+
+.text-primary-dark { color: var(--primary-dark); }
+.text-primary-medium { color: var(--primary-medium); }
+.text-primary-darker { color: var(--primary-darker); }
+.text-accent-orange { color: var(--accent-orange); }
+.text-light-cream { color: var(--light-cream); }
+
+.border-primary-dark { border-color: var(--primary-dark); }
+.border-primary-medium { border-color: var(--primary-medium); }
+.border-accent-orange { border-color: var(--accent-orange); }
+
+/* Hover states */
+.hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
+.hover\:bg-primary-medium:hover { background-color: var(--primary-medium); }
+.hover\:bg-accent-orange:hover { background-color: var(--accent-orange); }
+.hover\:bg-whatsapp-dark:hover { background-color: #1DA851; }
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.section-padding {
+  padding: 5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 1rem;
+  }
+}
+
+
