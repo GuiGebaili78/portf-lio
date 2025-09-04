@@ -6,15 +6,15 @@ export default function Contact() {
   const handleDownloadCV = () => {
     try {
       const link = document.createElement('a')
-      link.href = '/curriculo_guilherme_gebaili.pdf'
-      link.download = 'curriculo_guilherme_gebaili.pdf'
+      link.href = '/cv_guilherme_gebaili.pdf'
+      link.download = 'cv_guilherme_gebaili.pdf'
       link.setAttribute('target', '_blank')
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
     } catch (error) {
       // Fallback: abrir em nova aba se o download falhar
-      window.open('/curriculo_guilherme_gebaili.pdf', '_blank')
+      window.open('/cv_guilherme_gebaili.pdf', '_blank')
     }
   }
   const contactMethods = [
